@@ -549,9 +549,10 @@ input[type="button"]:focus {
     line-height: 24px;
 }
 
-.footer__copyright {
+.footer_copyright {
     color: #ffffff;
-    position: absolute;
+    font-size: 16px; 
+    padding-top: 56px;
 }
 
 
@@ -661,7 +662,7 @@ input[type="button"]:focus {
     top: 50%;
     right: -23%;
     -webkit-transform: translate(-50%, -50%);
-    width: 47%;
+    width: 35%;
 }
 
 .navigation__list {
@@ -1226,16 +1227,18 @@ ul.tabs li.active {
     background-image: url(../img/ic_download.svg);
     background-position: 0px 0px;
     background-size: 16px;
+
 }
 
 
 
-/* 20210213 新增 footer sns */
+/* 20220925 修改footer*/
 /*footer CSS*/
 
 .footer {
     position: relative;
     background-color: #292929;
+    text-align: center;
 }
 
 .footer__wrapper {
@@ -1245,31 +1248,32 @@ ul.tabs li.active {
     align-items: center;
 }
 
-.sns {
+.footer_content {
+    width: 1000px;
+    margin: auto;
     display: flex;
-    margin: 30px 0 60px 0;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.sns img{
-    width: 26px;
-    height: 26px;
-    margin: -12px auto;   
-    line-height: 26px;
+.footer_text {
+    font-size: 18px; 
+    margin-bottom: 5px; 
+    text-align: left;
+    line-height: 1.5rem;
+}
+.footer_text p{
+    margin-bottom: 12px;
+    font-weight: bold;
+
+}
+.footer_text a{
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: underline;
+    padding-bottom: 12px;
+    display: block;
 }
 
-.sns a {
-    isplay: inline-block;
-    color: #1b8683;
-    text-decoration: none;
-    width: 48px;
-    height: 48px;
-    border: 1px #424242 solid;
-    margin: 0px 12px;
-    vertical-align: middle;
-    line-height: 40px;
-    border-radius: 4px;
-}
 
 .footer__wrapper p {
     display: block;
@@ -1843,6 +1847,10 @@ ul.tabs li.active {
         width: auto;
         padding: 0 24px;
     }
+    .footer_content{
+        width: auto;
+        padding: 0 24px;
+    }
     .project_content_a {
         display: block;
     }
@@ -1892,25 +1900,17 @@ ul.tabs li.active {
         -ms-flex-direction: column;
         flex-direction: column
     }
-    .footer__copyright {
-        -webkit-box-ordinal-group: 4;
-        -webkit-order: 3;
-        -ms-flex-order: 3;
-        order: 3;
-        color: #004843;
-        left: 0;
-        top: 32%;
-        font-size: 13px;
+    .footer {
+        padding: 0;
+        height: auto;
     }
-    .footer__logo {
-        position: static;
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-        -webkit-box-ordinal-group: 3;
-        -webkit-order: 2;
-        -ms-flex-order: 2;
-        order: 2;
+    .footer_content{
+        display: block;
     }
+    .footer_text{
+        margin: 32px 0px;
+    }
+}
 }
 
 @media (max-width: 630px) {
@@ -2067,7 +2067,7 @@ ul.tabs li.active {
     .title {
         margin: 30px 0px;
     }
-}
+   
 
 
 
