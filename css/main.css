@@ -679,7 +679,6 @@ input[type="button"]:focus {
 
 .navigation__list > li a {
     color: #292929;
-    font-weight: 600;
     text-transform: uppercase;
     -webkit-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out;
@@ -1347,7 +1346,7 @@ ul.tabs li.active {
 /* about 關於我 20210215 */
 .about_box {
     display: flex;
-    margin-top: 40px;
+    margin: 40px 0 60px 0;
 }
 
 
@@ -1359,10 +1358,6 @@ ul.tabs li.active {
     color: #292929;
     font-size: 16px;
     line-height: 28px;
-}
-
-.about_me h3 {
-    color: #1b8683;
 }
 
 .about_content {
@@ -1387,6 +1382,7 @@ ul.tabs li.active {
     color: #292929;;
     font-weight: bold;
     margin-bottom: 16px;
+    font-size: 20px;
 }
 
 .about_word p {
@@ -1399,17 +1395,37 @@ ul.tabs li.active {
     padding: 5px 5px;
 }
 
-.about_others {
-    padding-top: 20px;
-    border-top: 1px #e3e8ef solid;
-}
-
-.about_others img {
-    margin-right: 15px;
-    width: 50px;
-}
 .about_word > h3 {
     font-size: 36px;
+}
+.about_principle{
+    padding: 40px 0px 60px 0;
+}
+.about_principle_content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_principle_box {
+    width: 50%;
+    background-color: #F9F9F9;
+    padding: 16px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.about_principle_box p {
+    margin-bottom: 8px;
+}
+
+.right_food_pics{
+    justify-content: space-between;
+    margin-top: 32px;
+}
+.right_food_pics img{
+    justify-content: space-between;
+    width: 31%;
+    padding-right: 20px;
 }
 
 
@@ -1600,7 +1616,6 @@ ul.tabs li.active {
         -webkit-transform: translateY(100%);
         transform: translateY(100%);
         color: #292929;
-        font-weight: 800;
         -webkit-transition: -webkit-transform 0s .4s;
         transition: -webkit-transform 0s .4s;
         transition: transform 0s .4s;
