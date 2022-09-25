@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gin's portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Gin Wu Portfolio">
+    <meta name="keywords" content="Gin Wu Portfolio">
+    <meta name="author" content="Gin Wu">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="icon" type="image/x-icon" href="img/ico.ico">
+</head>
+
+
+<body>
+
+    <!-- SECTION: Splashscreen -->
+    <div class="splashscreen">
+        <div class="preloader">
+            <span class="preloader__text">Loading</span>
+        </div>
+    </div>
+    <!-- END SECTION: Splashscreen -->
+    <!-- SECTION: Navigation -->
+    <div id="top" class="navigation">
+        <div class="navigation__wrapper wrapper--large">
+            <a class="navigation__logo logo" href="index.html">Gin</a>
+            <nav class="navigation__container">
+                <ul class="navigation__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+            <a class="navigation__cta button" href="mailto:ginginwu2015@gmail.com">Contact</a>
+            <div class="navigation__burger">
+                <span class="navigation__burger-el navigation__burger-el--top"></span>
+                <span class="navigation__burger-el navigation__burger-el--middle"></span>
+                <span class="navigation__burger-el navigation__burger-el--bottom"></span>
+            </div>
+        </div>
+    </div>
+    <!-- END SECTION: Navigation -->
+    <main role="main">
+        <section class="portfoilo_content">
+            <div class="wrapper--large">
+                
+                   <img src="img/new/HiKara_tv_app.jpg" width="100%" alt="Bank Exchange Points<br> Website Design">
+                   
+                    <div class="portfoilo_btn">
+                     <a class="button" href="portfolio.html">Back</a>
+                    </div>
+                </div>
+        </section>
+
+
+
+    </main>
+    <!--  Footer 開始-->
+    <footer class="footer">
+		<div class="footer__wrapper wrapper--large">
+			<p class="footer__copyright no-margin">&copy; 2019 Gin Wu</p>
+			<a class="footer__logo logo" href="#0">GIN</a>
+			<a class="footer__arrow" id="totop" href="javascript: void(0)">
+				<svg class="footer__arrow-el" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0" y="0" viewBox="0 0 130 65" xml:space="preserve" enable-background="new 0 0 130 65"><g transform="translate(0.000000,65.000000) scale(0.100000,-0.100000)"><path d="M315.4 365c-336-305-345-315-290-351 18-12 32-14 45-8 10 5 145 123 300 262l281 253 196-178c108-98 237-215 287-260 50-46 98-83 107-83s27 9 40 19c20 16 22 23 14 46 -12 33-623 585-647 585C638.4 650 489.4 522 315.4 365z"/></g></svg>
+			</a>
+		</div>
+	</footer>
+    <!-- Footer 結束 -->
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- jQuery local fallback -->
+<script>
+    // tabbed content
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+    /* if in tab mode */
+    $("ul.tabs li").click(function() {
+
+        $(".tab_content").hide();
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn();
+
+        $("ul.tabs li").removeClass("active");
+        $(this).addClass("active");
+
+        $(".tab_drawer_heading").removeClass("d_active");
+        $(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
+
+    });
+    /* if in drawer mode */
+    $(".tab_drawer_heading").click(function() {
+
+        $(".tab_content").hide();
+        var d_activeTab = $(this).attr("rel");
+        $("#" + d_activeTab).fadeIn();
+
+        $(".tab_drawer_heading").removeClass("d_active");
+        $(this).addClass("d_active");
+
+        $("ul.tabs li").removeClass("active");
+        $("ul.tabs li[rel^='" + d_activeTab + "']").addClass("active");
+    });
+
+
+    /* Extra class "tab_last" 
+       to add border to right side
+       of last tab */
+    $('ul.tabs li').last().addClass("tab_last");
+
+</script>
+<script>
+       $(document).ready(function () {
+        function t() {
+            $(".navigation__burger").toggleClass("navigation__burger--is-open"), $(".navigation__container").toggleClass("navigation__container--is-open"), $("html, body").toggleClass("scroll-lock")
+        }
+        if ($(window).load(function () {
+                $(".splashscreen").addClass("splashscreen--is-hidden"), setTimeout(function () {
+                    $(".splashscreen").css({
+                        display: "none"
+                    });
+                    var t = $(".introduction__content-el--name"),
+                        e = $(".introduction__content-el--job");
+                    TweenLite.to([t, e], .8, {
+                        x: 0,
+                        opacity: 1,
+                        ease: Power1.easeOut
+                    })
+                }, 800)
+            }), $(".navigation__burger").click(function () {
+                t()
+            }), $('a[href*="#"]:not([href="#0"])').click(function (e) {
+                e.preventDefault(), $(".navigation__container").hasClass("navigation__container--is-open") && t();
+                var i = $(this).attr("href");
+                TweenLite.to(window, 1, {
+                    scrollTo: i
+                })
+            }), 
+            
+            $(window).width() > 991) {
+           
+            P.staggerFrom(T, .8, {
+                opacity: 0,
+                ease: Power1.easeOut
+            }, .4).from(b, .8, {
+                opacity: 0,
+                ease: Power1.easeOut
+            }, "-=0.2");
+            var S = new ScrollMagic.Scene({
+                    triggerElement: w,
+                    reverse: !1
+                }).setTween(P).addTo(e),
+                O = $(".contact"),
+                k = $(".contact__form"),
+                C = $(".contact__visual"),
+                A = CSSRulePlugin.getRule(".contact__wrapper:before"),
+                R = new TimelineLite;
+            R.from(k, .8, {
+                x: 50,
+                opacity: 0,
+                ease: Power1.easeOut
+            }).from(C, .8, {
+                x: -50,
+                opacity: 0,
+                ease: Power1.easeOut
+            }, 0).from(A, .8, {
+                cssRule: {
+                    opacity: 0
+                },
+                ease: Power1.easeOut
+            });
+            var M = new ScrollMagic.Scene({
+                triggerElement: O,
+                reverse: !1
+            }).setTween(R).addTo(e)
+        }
+           
+        $(".work__navigation-el").click(function () {
+            var t = $(this),
+                e = t.parent().children().index(t);
+            t.parent().children().removeClass("work__navigation-el--is-active"), t.addClass("work__navigation-el--is-active"), $(".work__list").children().removeClass("work__list-el--is-active"), $(".work__list").children().eq(e).addClass("work__list-el--is-active")
+        })
+    });
+    
+</script>
+<script>
+ $("#totop").click(function () {
+    $("html,body").animate({
+        scrollTop: 0
+    }, 1000);
+});
+
+</script>
+
+</html>
